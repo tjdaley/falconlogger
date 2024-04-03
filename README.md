@@ -58,7 +58,9 @@ from falconlogger.flogger import FalconLogger
 logger = FalconLogger('test logger')
 logger.info("Hello, World!!")
 logger.warn("Shutting down.")
+```
 
+```
 >> 2024-04-02 23:15:22,382 - test logger - INFO     - Logger initialized
 >> 2024-04-02 23:15:22,412 - test logger - INFO     - Hello, World!!
 >> 2024-04-02 23:15:22,413 - test logger - WARNING  - Shutting down.
