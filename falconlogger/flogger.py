@@ -8,9 +8,15 @@ import os
 load_dotenv()
 
 class FalconLogger(logging.Logger):
+    DEBUG = logging.DEBUG
+    INFO = logging.INFO
+    WARNING = logging.WARNING
+    ERROR = logging.ERROR
+    CRITICAL = logging.CRITICAL
+    
     """Configures the logger based on the environment variables"""
-    def __init__(self, name):
-        super().__init__(name, level=self.get_log_level())
+    def __init__(self, name, level=None):
+        super().__init__(name, level=level or self.get_log_level())
         console_handler = logging.StreamHandler()
         self.addHandler(console_handler)
         console_handler.setFormatter(logging.Formatter(self.get_format_string()))
