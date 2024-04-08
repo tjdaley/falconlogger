@@ -20,7 +20,7 @@ class FalconLogger(logging.Logger):
         console_handler = logging.StreamHandler()
         self.addHandler(console_handler)
         console_handler.setFormatter(logging.Formatter(self.get_format_string()))
-        self.info('Logger initialized')
+        self.debug('Logger initialized')
 
     def get_log_level(self):
         """Returns the log level based on the LOG_LEVEL environment variable"""
